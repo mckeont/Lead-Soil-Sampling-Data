@@ -1,10 +1,10 @@
 var myStyle = function(feature) {
   // return {fillColor: 'red'};
 switch(feature.properties.CODE) {
-  case '19131': return {color: "orange", fillOpacity: 0.5, weight: 3};
-  case '19151': return {color: "orange", fillOpacity: 0.5, weight: 3};
-  case '19139': return {color: "orange", fillOpacity: 0.5, weight: 3};
-  case '19104': return {color: "orange", fillOpacity: 0.5, weight: 3};
+  case '19131': return {color: "MidnightBlue", fillOpacity: 0.3, weight: 3};
+  case '19151': return {color: "MidnightBlue", fillOpacity: 0.3, weight: 3};
+  case '19139': return {color: "MidnightBlue", fillOpacity: 0.3, weight: 3};
+  case '19104': return {color: "MidnightBlue", fillOpacity: 0.3, weight: 3};
   default: return {
     color:"MidnightBlue",
     fillOpacity: 0.3,
@@ -66,7 +66,15 @@ L.geoJson(leadSample, {
                return L.marker(latlng, {icon: pennLogo});
            },
 }).bindPopup(function (layer) {
-    return (layer.feature.properties.thing);
+    return (layer.feature.properties.Date +
+      "<dd>" + layer.feature.properties.Location +"</dd>" +
+     "<dd>" + layer.feature.properties.Address +"</dd>"+
+    "<dd>" + "Sample A:" + " " + layer.feature.properties.Lead_A + "ppm"+ "</dd>"+
+   "<dd>" + "Sample B:" + " " + layer.feature.properties.Lead_B + "ppm"+ "</dd>" +
+  "<dd>" + "Sample C:" + " " + layer.feature.properties.Lead_C + "ppm"+ "</dd>"+
+ "<dd>" + "Sample D:" + " " + layer.feature.properties.Lead_D + "ppm"+ "</dd>"+
+"<dd>" + "Sample E:" + " " + layer.feature.properties.Lead_E + "ppm"+ "</dd>"
+   );
   }).addTo(map);
 
 
