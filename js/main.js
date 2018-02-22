@@ -54,6 +54,13 @@ console.log(pennLogo);
     return layer.feature.properties.CODE;
 }).addTo(map);
 
+L.geoJson(lancaster,{
+
+}).addTo(map);
+
+
+
+
 
 L.geoJson(leadSample, {
   pointToLayer: function(feature, latlng) {
@@ -76,6 +83,23 @@ L.geoJson(leadSample, {
 "<dd>" + "Sample E:" + " " + layer.feature.properties.Lead_E + "ppm"+ "</dd>"
    );
   }).addTo(map);
+
+  //testing out console.log
+
+  console.log(1 + 1);
+
+  if (window.console && window.console.log) {
+  // console is available
+}
+
+
+  // Creating circles
+//   var circle = L.circle([39.95399727797304, -75.20959138870239], {
+//     color: 'red',
+//     fillColor: '#f03',
+//     fillOpacity: 0.5,
+//     radius: 500
+// }).addTo(map);
 
 
 // });
