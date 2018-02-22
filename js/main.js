@@ -84,7 +84,7 @@ L.geoJson(leadSample, {
 
   //testing out console.log
 
-  console.log(1 + 1);
+  console.log("You found the easter egg, Hi Rich and Marilyn!");
 
   if (window.console && window.console.log) {
   // console is available
@@ -96,12 +96,12 @@ $(document).ready(function() {
  //Button Zoom
   $("#lanc").click(function(){
      map.setView([40.044437, -76.306229]);
-     map.setZoom(12);
+     map.setZoom(10);
   });
 
   $("#philly").click(function(){
      map.setView([39.987614, -75.163913]);
-     map.setZoom(12);
+     map.setZoom(10);
   });
 });
 
