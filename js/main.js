@@ -84,7 +84,7 @@ L.geoJson(leadSample, {
 
   //testing out console.log
 
-  console.log("You found the easter egg, Hi Rich and Marilyn!");
+  console.log("Can you find the easter egg? It's a red circle, hidden somewhere in the world");
 
   if (window.console && window.console.log) {
   // console is available
@@ -114,12 +114,12 @@ $(document).ready(function() {
 
 
   // Creating circles
-//   var circle = L.circle([39.95399727797304, -75.20959138870239], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 500
-// }).addTo(map);
+  var circle = L.circle([32.715736, -117.161087], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
 
 
 // });
