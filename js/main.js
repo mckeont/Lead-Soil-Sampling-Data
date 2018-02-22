@@ -8,7 +8,7 @@ switch(feature.properties.CODE) {
   default: return {
     color:"MidnightBlue",
     fillOpacity: 0.3,
-    weight: 1
+    weight: 3
   };
 }
 };
@@ -84,7 +84,7 @@ L.geoJson(leadSample, {
 
   //testing out console.log
 
-  console.log("Can you find the easter egg? It's a red circle, hidden somewhere in the world");
+  console.log("Can you find the easter egg? It's a red circle, hidden somewhere in the world. *HINT* Origin of 'this backpack's been all around the world. Me too!''");
 
   if (window.console && window.console.log) {
   // console is available
@@ -103,12 +103,9 @@ $(document).ready(function() {
      map.setView([39.987614, -75.163913]);
      map.setZoom(10);
   });
+
+
 });
-
-
-
-
-
 
 
 
@@ -118,8 +115,8 @@ $(document).ready(function() {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
+    radius: 500,
+}).bindPopup("<h1> You found the Easter Egg! </h1>").addTo(map);
 
 
 // });
