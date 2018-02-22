@@ -55,7 +55,7 @@ console.log(pennLogo);
 }).addTo(map);
 
 L.geoJson(lancaster,{
-
+onEachFeature: onEachFeature
 }).addTo(map);
 
 
@@ -74,8 +74,6 @@ L.geoJson(leadSample, {
            },
 }).bindPopup(function (layer) {
     return (layer.feature.properties.Date +
-      "<dd>" + layer.feature.properties.Location +"</dd>" +
-     "<dd>" + layer.feature.properties.Address +"</dd>"+
     "<dd>" + "Sample A:" + " " + layer.feature.properties.Lead_A + "ppm"+ "</dd>"+
    "<dd>" + "Sample B:" + " " + layer.feature.properties.Lead_B + "ppm"+ "</dd>" +
   "<dd>" + "Sample C:" + " " + layer.feature.properties.Lead_C + "ppm"+ "</dd>"+
@@ -91,6 +89,28 @@ L.geoJson(leadSample, {
   if (window.console && window.console.log) {
   // console is available
 }
+
+
+//buttons
+$(document).ready(function() {
+ //Button Zoom
+  $("#lanc").click(function(){
+     map.setView([40.044437, -76.306229]);
+     map.setZoom(12);
+  });
+
+  $("#philly").click(function(){
+     map.setView([39.987614, -75.163913]);
+     map.setZoom(12);
+  });
+});
+
+
+
+
+
+
+
 
 
   // Creating circles
