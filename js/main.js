@@ -110,7 +110,7 @@ return result;
 }
 
 
-//buttons
+//buttons_
 $(document).ready(function() {
  //Button Zoom
   $("#lanc").click(function(){
