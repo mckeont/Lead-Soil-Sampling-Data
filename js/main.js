@@ -65,15 +65,20 @@ onEachFeature: onEachFeature
 
 // console.log(cleanUp);
 
+var sampleSite = {
+    radius: 5,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.7
+};
+
+
+
 L.geoJson(leadSample, {
   pointToLayer: function(feature, latlng) {
-               var pennLogo = new L.Icon({
-                     iconUrl: 'images/pennLogo.png', //source, online search
-                     iconSize: [25, 25],
-                     iconAnchor: [12, 25],
-                     popupAnchor: [0, -25]
-               });
-               return L.marker(latlng, {icon: pennLogo});
+              return L.circleMarker(latlng, sampleSite);
            }
 
 }).bindPopup(function (layer) {
@@ -121,6 +126,10 @@ $(document).ready(function() {
   $("#philly").click(function(){
      map.setView([39.987614, -75.163913]);
      map.setZoom(10);
+  });
+
+  $('#fennsTreasure').click(function(){
+    window.open(url, "http://fennclues.com/hints-and-clues-fenn-treasure.html");
   });
 
 
