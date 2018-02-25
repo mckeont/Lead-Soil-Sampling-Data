@@ -103,7 +103,7 @@ return result;
 
   //testing out console.log
 
-  console.log("Can you find the easter egg? It's a red circle, hidden somewhere in the world. *HINT* Origin of 'this backpack's been all around the world. Me too!''");
+  console.log("Can you find the easter egg? It's a red circle, hidden in a city with visible sunsets that dip below the horizon");
 
   if (window.console && window.console.log) {
   // console is available
