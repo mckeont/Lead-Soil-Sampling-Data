@@ -58,9 +58,12 @@ L.geoJson(lancaster,{
 onEachFeature: onEachFeature
 }).addTo(map);
 
+// var cleanUp = function(feature, layer) {
+//    onEachFeature(if(typefeature.properties.Lead_B == undefined || feature.properties.Lead_B == null || feature.properties.Lead_B == 0 ) return ;)
+//
+// }
 
-
-
+// console.log(cleanUp);
 
 L.geoJson(leadSample, {
   pointToLayer: function(feature, latlng) {
@@ -71,16 +74,32 @@ L.geoJson(leadSample, {
                      popupAnchor: [0, -25]
                });
                return L.marker(latlng, {icon: pennLogo});
-           },
+           }
+
 }).bindPopup(function (layer) {
-    return (layer.feature.properties.Date +
-    "<dd>" + "Sample A:" + " " + layer.feature.properties.Lead_A + "ppm"+ "</dd>"+
-   "<dd>" + "Sample B:" + " " + layer.feature.properties.Lead_B + "ppm"+ "</dd>" +
-  "<dd>" + "Sample C:" + " " + layer.feature.properties.Lead_C + "ppm"+ "</dd>"+
- "<dd>" + "Sample D:" + " " + layer.feature.properties.Lead_D + "ppm"+ "</dd>"+
-"<dd>" + "Sample E:" + " " + layer.feature.properties.Lead_E + "ppm"+ "</dd>"
-   );
-  }).addTo(map);
+
+  var result = ( "Sample Date:" + " " + layer.feature.properties.Date );
+  result = result + ("<dd>" + "<em>" + "Parts Per Million" + "</em>" + "</dd>");
+  result = result + ("<dd>" + "Sample A:" + " " + layer.feature.properties.Lead_A + "</dd>");
+
+if(layer.feature.properties.Lead_B != undefined && layer.feature.properties.Lead_B != null && layer.feature.properties.Lead_B != 0)
+ result = result + ("<dd>" + "Sample B:" + " " + layer.feature.properties.Lead_B + "</dd>");
+
+ if(layer.feature.properties.Lead_C != undefined && layer.feature.properties.Lead_C != null && layer.feature.properties.Lead_C != 0)
+  result = result + ("<dd>" + "Sample C:" + " " + layer.feature.properties.Lead_C + "</dd>");
+
+  if(layer.feature.properties.Lead_D != undefined && layer.feature.properties.Lead_D != null && layer.feature.properties.Lead_D != 0)
+   result = result + ("<dd>" + "Sample D:" + " " + layer.feature.properties.Lead_D + "</dd>");
+
+   if(layer.feature.properties.Lead_E != undefined && layer.feature.properties.Lead_E != null && layer.feature.properties.Lead_E != 0)
+    result = result + ("<dd>" + "Sample E:" + " " + layer.feature.properties.Lead_E + "</dd>");
+
+return result;
+ }).addTo(map);
+
+
+
+ // Discalimer clarifiying that there is a level
 
   //testing out console.log
 
