@@ -1,4 +1,3 @@
-# Lead Soil Sampling Data
+# Liz's Practice Sites
 
-
-https://mckeont.github.io/Lead-Soil-Sampling-Data/ 
+https://lizlikesplants.github.io/Lead-Soil-Sampling-Data/
