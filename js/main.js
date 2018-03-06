@@ -102,6 +102,10 @@ if(layer.feature.properties.Lead_B != undefined && layer.feature.properties.Lead
 return result;
  }).addTo(map);
 
+ var heat = L.heatlayer(leadSample).addTo(map);
+
+ console.log(leadSample);
+
 
 
  // Discalimer clarifiying that there is a level
@@ -144,6 +148,7 @@ $(document).ready(function() {
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 500,
+
 }).bindPopup("<h1> You found the Easter Egg! </h1>").addTo(map);
 
 
