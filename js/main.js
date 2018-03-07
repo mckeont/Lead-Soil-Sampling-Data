@@ -102,7 +102,6 @@ if(layer.feature.properties.Lead_B != undefined && layer.feature.properties.Lead
 return result;
  }).addTo(map);
 
- var heat = L.heatlayer(leadSample).addTo(map);
 
  console.log(leadSample);
 
@@ -140,7 +139,7 @@ $(document).ready(function() {
 });
 
 
-
+var popTest = "<a href='images/Health_Quilt_forBlog.jpg'> Health Equity</a>"
 
   // Creating circles
   var circle = L.circle([32.715736, -117.161087], {
@@ -149,7 +148,9 @@ $(document).ready(function() {
     fillOpacity: 0.5,
     radius: 500,
 
-}).bindPopup("<h1> You found the Easter Egg! </h1>").addTo(map);
+}).bindPopup("<h1> You found the Easter Egg! </h1>" + "<br>" + popTest ).addTo(map);
+
+console.log(circle);
 
 
 // });
