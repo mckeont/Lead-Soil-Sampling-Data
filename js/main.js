@@ -111,7 +111,7 @@ return result;
 
   //testing out console.log
 
-  console.log("Can you find the easter egg? It's a red circle, hidden in a city with visible sunsets that dip below the horizon");
+  console.log("What is the next clue?:");
 
   if (window.console && window.console.log) {
   // console is available
@@ -139,18 +139,41 @@ $(document).ready(function() {
 });
 
 
-var popTest = "<a href='images/Health_Quilt_forBlog.jpg'> Health Equity</a>"
+var popTest = "<a href ='images/Health_Quilt_forBlog.jpg'> Next Clue </a>"
 
   // Creating circles
-  var circle = L.circle([32.715736, -117.161087], {
+  var circle = L.circle([36.715736, -107.161087], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 500,
 
-}).bindPopup("<h1> You found the Easter Egg! </h1>" + "<br>" + popTest ).addTo(map);
+}).bindPopup("<h4 style= 'color:orange'> You found an Easter Egg! </h4>" + "<br>" +"<dd>"+
+popTest + " " + "<br>" + "<h3><b>poems</b></h3>" ).addTo(map);
 
-console.log(circle);
+
+//run a loop
+
+//
+// for(var i = 0; i <3; i++) {
+//   console.log(i);
+// }
+
+var fenn = [];
+for ( var i=1.20, l=2.5; i<l; i+=0.01 ){
+
+    fenn.push(i.toFixed(2));
+
+}
+
+heights = fenn.join('\n');
+
+var poems =  "Begin it where warm waters halt" + " "
++ "And take it in the canyon down," + " "
++ "Not far, but too far to walk." + " "
++ "Put in below the home of Brown."
+
+
 
 
 // });
