@@ -152,13 +152,6 @@ var popTest = "<a href ='images/Health_Quilt_forBlog.jpg'> Next Clue </a>"
 popTest + " " + "<br>" + "<h3><b>poems</b></h3>" ).addTo(map);
 
 
-//run a loop
-
-//
-// for(var i = 0; i <3; i++) {
-//   console.log(i);
-// }
-
 var fenn = [];
 for ( var i=1.20, l=2.5; i<l; i+=0.01 ){
 
