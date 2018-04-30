@@ -74,7 +74,13 @@ var sampleSite = {
     fillOpacity: 0.7
 };
 
-
+L.geoJson(richData, {
+  pointToLayer: function(feature, latlng){
+    return L.circleMarker(latlng, sampleSite);
+  }
+}).bindPopup(function (layer) {
+    return ("Sample A:" + " " +"<dd>" + "<em>" + "Parts Per Million" + "</em>" + "</dd>" + layer.feature.properties.Lead)
+}).addTo(map);
 
 L.geoJson(leadSample, {
   pointToLayer: function(feature, latlng) {
