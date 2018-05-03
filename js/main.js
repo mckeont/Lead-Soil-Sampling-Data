@@ -66,7 +66,7 @@ onEachFeature: onEachFeature
 // console.log(cleanUp);
 
 var sampleSite = {
-    radius: 5,
+    radius: 2,
     fillColor: "#ff7800",
     color: "#000",
     weight: 1,
@@ -74,12 +74,29 @@ var sampleSite = {
     fillOpacity: 0.7
 };
 
+var jMeeker = {
+  radius: 3,
+  fillColor: "#19790E",
+  color: "#000",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.7
+}
+
 L.geoJson(richData, {
   pointToLayer: function(feature, latlng){
     return L.circleMarker(latlng, sampleSite);
   }
 }).bindPopup(function (layer) {
     return ("Sample A:" + " " +"<dd>" + "<em>" + "Parts Per Million" + "</em>" + "</dd>" + layer.feature.properties.Lead)
+}).addTo(map);
+
+L.geoJson(garnetValley, {
+  pointToLayer: function(feature, latlng){
+    return L.circleMarker(latlng, jMeeker);
+  }
+}).bindPopup(function (layer){
+  return ("Garnet Valley:" + " " + "<dd>" + layer.feature.properties.description)
 }).addTo(map);
 
 L.geoJson(leadSample, {
