@@ -66,7 +66,7 @@ onEachFeature: onEachFeature
 // console.log(cleanUp);
 
 var sampleSite = {
-    radius: 4,
+    radius: 5,
     fillColor: "#ff7800",
     color: "#000",
     weight: 1,
@@ -75,7 +75,7 @@ var sampleSite = {
 };
 
 var jMeeker = {
-  radius: 3,
+  radius: 5,
   fillColor: "#19790E",
   color: "#000",
   weight: 1,
