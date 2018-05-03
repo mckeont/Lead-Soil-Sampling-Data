@@ -66,7 +66,7 @@ onEachFeature: onEachFeature
 // console.log(cleanUp);
 
 var sampleSite = {
-    radius: 2,
+    radius: 4,
     fillColor: "#ff7800",
     color: "#000",
     weight: 1,
